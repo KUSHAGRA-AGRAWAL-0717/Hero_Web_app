@@ -1,0 +1,51 @@
+.card-container {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  max-height: 3em; /* Fixed height for the title */
+  overflow: hidden; /* Ensure overflow is hidden if title is too long */
+}
+
+.card-description {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  margin-bottom: 8px;
+  max-height: 4em; /* Fixed height for the description */
+  overflow: hidden; /* Ensure overflow is hidden if description is too long */
+}
+
+.card-author {
+  font-size: 0.8rem;
+  color: #7a7a7a;
+  margin-bottom: 12px;
+  max-height: 1.5em; /* Fixed height for the author */
+  overflow: hidden; /* Ensure overflow is hidden if author name is too long */
+}
+
+.card-link {
+  color: #1e90ff;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}

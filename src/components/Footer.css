@@ -1,0 +1,64 @@
+.Footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.Four {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.Mf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Up,
+.Down {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.Main-footer__promotion-image {
+  width: 100px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.Main-footer__promotion-info {
+  max-width: 200px;
+}
+
+.Main-footer__promotion-title {
+  font-weight: bold;
+}
+
+.Main-footer__promotion-description {
+  font-size: 12px;
+}
+
+.Icons2 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.Icons2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Icons2 svg {
+  fill: currentColor;
+  transition: fill 0.3s;
+}
+
+.Icons2 svg:hover {
+  fill: #f39c12;
+}

@@ -1,0 +1,100 @@
+/* General Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 50;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.preview-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preview-content {
+  width: calc(100vw - [padding or margin value]px);
+  margin: 0;
+}
+
+/* Responsive Styles for .above */
+@media (max-width: 768px) {
+  .above .left,
+  .above .right {
+    flex-direction: column;
+    gap: 2px;
+    padding: 2px;
+  }
+
+  .above .middle {
+    margin: 0 auto; /* Center the middle section */
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .h-17 {
+    height: auto; /* Allow height to adjust */
+    padding-left: 8px; /* Adjust padding for smaller screens */
+    padding-right: 8px; /* Adjust padding for smaller screens */
+  }
+
+  .above .left,
+  .above .right {
+    border: none; /* Remove borders on smaller screens */
+  }
+
+  .above img {
+    height: 12vh; /* Adjust logo size for smaller screens */
+    width: auto;
+  }
+
+  .above .middle {
+    padding: 5px; /* Reduce padding for the middle section */
+  }
+
+  .above .left button,
+  .above .right button {
+    width: 100%; /* Buttons take full width on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .above .left,
+  .above .right {
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .h-17 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .above img {
+    height: 10vh; /* Further reduce logo size for very small screens */
+  }
+
+  .above p {
+    font-size: 14px; /* Adjust font size for very small screens */
+    text-align: center; /* Center text for better readability */
+  }
+}
