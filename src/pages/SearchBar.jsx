@@ -14,7 +14,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="search-bar flex items-center border border-gray-300 rounded-md shadow-sm mt-40">
+    <div className="search-bar flex items-center border border-gray-300 rounded-md shadow-sm mt-52">
       <input
         type="text"
         value={query}

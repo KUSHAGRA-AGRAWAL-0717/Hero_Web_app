@@ -21,7 +21,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="profile-page p-4 max-w-lg mx-auto bg-white shadow-md rounded-md mt-36">
+    <div className="profile-page p-4 max-w-lg mx-auto bg-white shadow-md rounded-md mt-44">
       <h1 className="text-2xl font-bold mb-4">Profile Page</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
