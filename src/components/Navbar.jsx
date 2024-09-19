@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import {
   Disclosure,
   DisclosureButton,
@@ -89,8 +90,15 @@ export default function Navbar() {
               borderRight: "1px solid rgba(0, 0, 255, 0.3)",
             }}
           >
-            <Button variant="outlined">Login</Button>
-            <Button variant="outlined">Sign Up</Button>
+            {/* Navigate to SignIn */}
+            <Link to="/signin">
+              <Button variant="outlined">Login</Button>
+            </Link>
+            
+            {/* Navigate to SignUp */}
+            <Link to="/signup">
+              <Button variant="outlined">Sign Up</Button>
+            </Link>
           </div>
 
           <div
@@ -119,13 +127,15 @@ export default function Navbar() {
             >
               Unleash Your Inner Hero
             </p>
+            <Link to="/search">
             <Button variant="outlined">
               <SearchOutlinedIcon />
               Search
-            </Button>
+            </Button></Link>
           </div>
         </div>
       </div>
+
       <Disclosure
         as="nav"
         className="bg-black"
@@ -201,12 +211,12 @@ export default function Navbar() {
                   className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <MenuItem>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                    >
-                      Your Profile
-                    </a>
+                  <Link
+  to="/profile"
+  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+>
+  Your Profile
+</Link>
                   </MenuItem>
                   <MenuItem>
                     <a
@@ -217,12 +227,12 @@ export default function Navbar() {
                     </a>
                   </MenuItem>
                   <MenuItem>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                    >
-                      Sign out
-                    </a>
+                  <Link
+  to="/signout"
+  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+>
+  Sign out
+</Link>
                   </MenuItem>
                 </MenuItems>
               </Menu>
